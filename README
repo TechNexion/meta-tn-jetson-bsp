@@ -1,0 +1,10 @@
+This meta layer contains the meta-tn-jetson-bsp Yocto layer for the NVIDIA Jetson platform. It provides board-specific BSP support, kernel and device-tree configuration, demo applications, graphics and camera integration, and related utilities needed to build and run the system on TN Jetson-based devices.
+
+
+# Adding the meta-tn-jetson-bsp layer to your build
+
+```bash
+bitbake-layers add-layer meta-tn-jetson-bsp
+```
+
+
