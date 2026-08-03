@@ -1,0 +1,38 @@
+From 140bfff615ef15c8e4d6f8805f530cd5dfd78393 Mon Sep 17 00:00:00 2001
+From: Tifa Chen <tifa.chen@technexion.com>
+Date: Mon, 3 Aug 2026 14:13:58 +0800
+Subject: [PATCH] tek-orin: remove DTB file name
+
+---
+ nv-platform/tegra234-tek-orin+p3767-0000-nv.dts | 2 --
+ nv-platform/tegra234-tek-orin+p3767-0003-nv.dts | 1 -
+ 2 files changed, 3 deletions(-)
+
+diff --git a/nv-platform/tegra234-tek-orin+p3767-0000-nv.dts b/nv-platform/tegra234-tek-orin+p3767-0000-nv.dts
+index 668927b..7cd2e5a 100644
+--- a/nv-platform/tegra234-tek-orin+p3767-0000-nv.dts
++++ b/nv-platform/tegra234-tek-orin+p3767-0000-nv.dts
+@@ -7,8 +7,6 @@
+ #include "tegra234-p3768-0000+p3767-xxxx-nv-common.dtsi"
+ 
+ / {
+-	nvidia,dtsfilename = __FILE__;
+-
+ 	aliases {
+ 		serial3 = &uartb;
+ 	};
+diff --git a/nv-platform/tegra234-tek-orin+p3767-0003-nv.dts b/nv-platform/tegra234-tek-orin+p3767-0003-nv.dts
+index 02e9295..9a4312c 100644
+--- a/nv-platform/tegra234-tek-orin+p3767-0003-nv.dts
++++ b/nv-platform/tegra234-tek-orin+p3767-0003-nv.dts
+@@ -8,7 +8,6 @@
+ 
+ / {
+ 	compatible = "nvidia,p3768-0000+p3767-0003", "nvidia,p3767-0003", "nvidia,tegra234";
+-	nvidia,dtsfilename = __FILE__;
+ 
+ 	aliases {
+ 		serial3 = &uartb;
+-- 
+2.53.0
+

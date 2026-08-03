@@ -3,8 +3,10 @@ SRC_REPO_TN_DT = "github.com/TechNexion-Vision/tn-jetson-device-tree.git;protoco
 BRANCH_TN_DT = "tn_l4t-r39.2.ga_kernel-6.8"
 
 # 2. download source code to ${UNPACKDIR}/tn-dt-src
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 SRC_URI:append:tn-tek = "\
     git://${SRC_REPO_TN_DT};branch=${BRANCH_TN_DT};destsuffix=tn-dt-src;name=tn-dt \
+    file://0001-tek-orin-remove-DTB-file-name.patch;apply=no \
 "
 SRCREV_tn-dt:tn-tek = "${AUTOREV}"
 
@@ -13,5 +15,6 @@ do_configure:prepend:tn-tek() {
     if [ -d "${UNPACKDIR}/tn-dt-src" ]; then
         cp -rf ${UNPACKDIR}/tn-dt-src/* ${S}/hardware/nvidia/t23x/nv-public/
         #rm -rf ${UNPACKDIR}/tn-dt-src
+        patch -p1 -d ${S}/hardware/nvidia/t23x/nv-public < ${UNPACKDIR}/0001-tek-orin-remove-DTB-file-name.patch
     fi
 }
