@@ -7,7 +7,14 @@ SRC_URI = "git://${SRC_REPO};name=machine;branch=${SRCBRANCH}"
 SRCBRANCH = "tn_l4t-r39.2.ga_kernel-6.8"
 SRCREV = "${AUTOREV}"
 
+inherit dos2unix
+
 do_install() {
+    find ${S} -type f  -name "*tek*.dts*" -exec dos2unix {} \;
+    # tweak for update GPIO12(PN.01) in output high group
+    sed -i '/TEGRA234_MAIN_GPIO(N, 1)/d' ${S}/Orin-tek-orin-a1-gpio-default.dtsi
+    sed -i '76i \\t\t\t\tTEGRA234_MAIN_GPIO(N, 1)' ${S}/Orin-tek-orin-a1-gpio-default.dtsi
+
     install -d ${D}${datadir}/tegraflash
 
     install -m 0644 \
