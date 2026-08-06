@@ -3,8 +3,7 @@ LICENSE = "Proprietary"
 LIC_FILES_CHKSUM = "file://Tegra_Software_License_Agreement-Tegra-Linux.txt;md5=376d20bd5275442226fcdf54e4844ddf"
 
 SRC_REPO = "github.com/TechNexion-Vision/tn-jetson-orin-pinmux.git;protocol=https"
-SRC_URI = "git://${SRC_REPO};name=machine;branch=${SRCBRANCH}"
-SRCBRANCH = "tn_l4t-r39.2.ga_kernel-6.8"
+SRC_URI = "git://${SRC_REPO};name=machine;branch=${TN_BRANCH}"
 SRCREV = "${AUTOREV}"
 
 inherit dos2unix
