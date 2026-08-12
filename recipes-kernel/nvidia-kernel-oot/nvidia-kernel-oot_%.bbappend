@@ -14,6 +14,15 @@ SRCREV_tn-cam:tn-tek = "${AUTOREV}"
 
 SRCREV_FORMAT:tn-tek = "tn-dt_tn-cam"
 
+# camera drivers
+TEGRA_OOT_CAMERA_DRIVERS:append = " \
+    ${KERNEL_MODULE_PACKAGE_PREFIX}kernel-module-tevs \
+    ${KERNEL_MODULE_PACKAGE_PREFIX}kernel-module-vls3 \
+    ${KERNEL_MODULE_PACKAGE_PREFIX}kernel-module-max96716a-tn \
+    ${KERNEL_MODULE_PACKAGE_PREFIX}kernel-module-max96717-tn \
+    ${KERNEL_MODULE_PACKAGE_PREFIX}kernel-module-max-serdes-all-tn \
+"
+
 # 3. replace source code with the fetched tn-dt-src
 do_configure:prepend:tn-tek() {
     if [ -d "${UNPACKDIR}/tn-dt-src" ]; then
