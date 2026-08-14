@@ -5,7 +5,7 @@ SRC_REPO_TN_CAM = "github.com/TechNexion-Vision/tn-jetson-camera-driver.git;prot
 # 2. download source code to ${UNPACKDIR}
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 SRC_URI:append:tn-tek = "\
-    git://${SRC_REPO_TN_DT};branch=${TN_BRANCH};destsuffix=tn-dt-src;name=tn-dt \
+    git://${SRC_REPO_TN_DT};branch=${TN_BRANCH_T23X};destsuffix=tn-dt-src;name=tn-dt \
     file://0001-tek-orin-remove-DTB-file-name.patch;apply=no \
     git://${SRC_REPO_TN_CAM};branch=${TN_BRANCH};destsuffix=tn-cam-src;name=tn-cam \
 "
