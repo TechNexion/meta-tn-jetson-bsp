@@ -69,6 +69,8 @@ fi
 OEROOT=$(readlink -f "$TD_TOP/layers")
 export OEROOT
 
+. $OEROOT/meta-tn-jetson-bsp/tools/tn-setup-utils.sh
+
 # There can be multiple distro layers in the repository, which
 # may require different setups.  The .templateconf file in the
 # distro layer can be used to handle where to look for config
@@ -87,6 +89,9 @@ fi
 	for var in $(echo $TD_VARS OEROOT DISTRO TEMPLATECONF); do unset $var; done; unset var
 	return 1
     }
+
+# add TechNexion bsp layers to bblayers.conf
+tn_auto_append_layer "$BUILDDIR" "Jetson Yocto Project Release" "meta-tn-jetson-bsp"
 
 # Make sure to configure in the user's distro and machine settings
 # into local.conf if this is the first time setting up.
