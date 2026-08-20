@@ -92,6 +92,7 @@ fi
 
 # add TechNexion bsp layers to bblayers.conf
 tn_auto_append_layer "$BUILDDIR" "Jetson Yocto Project Release" "meta-tn-jetson-bsp"
+tn_auto_append_layer "$BUILDDIR" "vizionsdk" "meta-tn-vizionsdk"
 
 # Make sure to configure in the user's distro and machine settings
 # into local.conf if this is the first time setting up.
