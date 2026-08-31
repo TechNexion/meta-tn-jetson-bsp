@@ -13,5 +13,21 @@ TEGRA_STAGED_BOOT_FIRMWARE:append = " \
 # Add vizionsdk license
 LICENSE_FLAGS_ACCEPTED:append = " commercial_tn"
 
+# Add TN WIFI/BT kernel drivers and firmware
+TN_WIFI ?= " \
+    kernel-module-ath10k-pci \
+    kernel-module-ath10k-core \
+    kernel-module-mac80211 \
+    kernel-module-libarc4 \
+    kernel-module-ath \
+    kernel-module-btusb \
+    kernel-module-btmtk \
+    kernel-module-btrtl \
+    kernel-module-btbcm \
+    kernel-module-btintel \
+"
+MACHINE_EXTRA_RRECOMMENDS:append = " ${TN_WIFI}"
+MACHINE_EXTRA_RDEPENDS:append = " linux-firmware-ath10k-qca9377 linux-firmware-qca-qca61x4-usb"
+
 # TN common tools
 IMAGE_INSTALL:append = " packagegroup-tn-jetson-tools"
