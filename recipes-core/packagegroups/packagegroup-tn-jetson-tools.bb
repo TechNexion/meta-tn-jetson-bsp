@@ -55,4 +55,5 @@ RDEPENDS:${PN} = " \
     udev \
     trace-cmd \
     libubootenv-bin \
+    packagegroup-tools-bluetooth \
 "
