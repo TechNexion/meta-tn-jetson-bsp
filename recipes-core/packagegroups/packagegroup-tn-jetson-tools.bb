@@ -50,6 +50,7 @@ RDEPENDS:${PN} = " \
     stressapptest \
     sudo \
     sysbench \
+    tn-tools \
     v4l-utils \
     udev \
     trace-cmd \
