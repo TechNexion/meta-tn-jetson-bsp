@@ -12,3 +12,6 @@ TEGRA_STAGED_BOOT_FIRMWARE:append = " \
 
 # Add vizionsdk license
 LICENSE_FLAGS_ACCEPTED:append = " commercial_tn"
+
+# TN common tools
+IMAGE_INSTALL:append = " packagegroup-tn-jetson-tools"
