@@ -15,6 +15,7 @@ RDEPENDS:${PN} = " \
     bash \
     bc \
     coreutils \
+    can-utils \
     cpulimit \
     dnsmasq \
     dtc \
@@ -25,6 +26,7 @@ RDEPENDS:${PN} = " \
     fbset \
     fb-test \
     fio \
+    grep \
     glmark2 \
     haveged \
     hdparm \
@@ -32,6 +34,7 @@ RDEPENDS:${PN} = " \
     i2c-tools \
     iozone3 \
     iptables \
+    iputils \
     iproute2 \
     iperf3 \
     libgpiod-tools \
@@ -39,6 +42,7 @@ RDEPENDS:${PN} = " \
     lmbench \
     memtester \
     mmc-utils \
+    modemmanager \
     net-tools \
     netperf \
     openssh-sftp-server \
@@ -55,5 +59,6 @@ RDEPENDS:${PN} = " \
     udev \
     trace-cmd \
     libubootenv-bin \
+    xrandr \
     packagegroup-tools-bluetooth \
 "
