@@ -1,0 +1,10 @@
+[Match]
+Name=wlan*
+
+[Network]
+DHCP=yes
+
+[DHCP]
+RouteMetric=20
+# UseGateway=no
+
