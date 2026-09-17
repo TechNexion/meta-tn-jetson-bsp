@@ -25,6 +25,8 @@ TN_WIFI ?= " \
     kernel-module-btrtl \
     kernel-module-btbcm \
     kernel-module-btintel \
+    kernel-module-can \
+    kernel-module-can-raw \
 "
 MACHINE_EXTRA_RRECOMMENDS:append = " ${TN_WIFI}"
 MACHINE_EXTRA_RDEPENDS:append = " linux-firmware-ath10k-qca9377 linux-firmware-qca-qca61x4-usb"
