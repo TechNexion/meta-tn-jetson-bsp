@@ -19,10 +19,10 @@ if [ -n "$BASH_SOURCE" ]; then
 elif [ -n "$ZSH_NAME" ]; then
     THIS_SCRIPT=$0
 else
-    THIS_SCRIPT="$(pwd)/setup-env"
+    THIS_SCRIPT="$(pwd)/tn-setup-env"
     if [ ! -e "$THIS_SCRIPT" ]; then
         echo "Error: $THIS_SCRIPT doesn't exist!" >&2
-        echo "Please run this script in setup-env's directory." >&2
+        echo "Please run this script in tn-setup-env's directory." >&2
         return 1
     fi
 fi
