@@ -9,8 +9,8 @@ SRC_URI:append:tn-tek = "\
     file://0001-tek-orin-remove-DTB-file-name.patch;apply=no \
     git://${SRC_REPO_TN_CAM};branch=${TN_BRANCH};destsuffix=tn-cam-src;name=tn-cam \
 "
-SRCREV_tn-dt:tn-tek = "${AUTOREV}"
-SRCREV_tn-cam:tn-tek = "${AUTOREV}"
+SRCREV_tn-dt:tn-tek = "d8493345822153a2e4915198704c049ca874a550"
+SRCREV_tn-cam:tn-tek = "51ffafe6a7efc4fb21a39a067f5804783ac66d31"
 
 SRCREV_FORMAT:tn-tek = "tn-dt_tn-cam"
 
